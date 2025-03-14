@@ -1,0 +1,206 @@
+body {
+  font-family: sans-serif; /* Sets the font family for the entire body */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Sets the body height to 100% of the viewport height */
+  margin: 0; /* Removes default body margin */
+  background: #f0f0f0; /* Sets a light gray background */
+}
+  
+                                               
+        .input {
+            padding: 10px;
+            /* Adds padding to input fields */
+            margin: 8px 0;
+            /* Adds margin to input fields */
+            width: 100%;
+            /* Makes input fields take up 100% of their container width */
+            box-sizing: border-box;
+            /* Includes padding and border in the element's total width and height */
+            border: 1px solid #060606;
+            /* Adds a light gray border to input fields */
+            border-radius: 4px;
+            /* Rounds the input field corners */
+        }
+
+        h1 {
+            text-align: center;
+            /* Centers the h1 heading text */
+        }
+
+        .container {
+            background-color: #16BAE3;/* the upper layer*\
+            /* Sets a white background for the container */
+            border-radius: 10px;
+            /* Rounds the container corners */
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            /* Adds a shadow to the container */
+            position: relative;
+            /* Sets relative positioning for the container */
+            overflow: hidden;
+            /* Hides any content that overflows the container */
+            width: 768px;
+            /* Sets a fixed width for the container */
+            max-width: 100%;
+            /* Ensures the container doesn't exceed 100% of its parent's width */
+            min-height: 480px;
+            /* Sets a minimum height for the container */
+        }
+
+        .form-container {
+			  
+            position: absolute;
+            /* Sets absolute positioning for the form container */
+            top: 0;
+            /* Positions the form container at the top */
+            height: 100%;
+            /* Sets the form container height to 100% */
+            transition: all 0.9s ease-in-out;
+            /* Adds a smooth transition effect */
+            width: 50%;
+            /* Sets the form container width to 50% */
+        }
+
+        .sign-in-form {
+            
+            display:grid;
+          
+            /* Positions the sign-in form at the left */
+            width: 80%;
+            /* Sets the sign-in form width to 100% */
+            z-index: 2;
+            /* Sets the z-index for layering */
+            padding: 50px;
+            /* Adds padding to the sign-in form */
+        }
+
+        .sign-up-form {
+           display: grid;
+            left: 0;
+            /* Positions the sign-up form at the left */
+            width: 70%;
+            /* Sets the sign-up form width to 100% */
+            opacity: 0;
+            /* Initially hides the sign-up form */
+            z-index: 1;
+            /* Sets the z-index for layering */
+            padding: 50px;
+            /* Adds padding to the sign-up form */
+        }
+
+        .overlay-container {
+
+            position: absolute;
+            /* Sets absolute positioning for the overlay container */
+            top: 0;
+            /* Positions the overlay container at the top */
+            left: 50%;
+            /* Positions the overlay container at 50% from the left */
+            width: 50%;
+            /* Sets the overlay container width to 50% */
+            height: 100%;
+            /* Sets the overlay container height to 100% */
+            overflow: hidden;
+            /* Hides any content that overflows the overlay container */
+            transition: transform 0.9s ease-in-out;
+            /* Adds a smooth transition effect */
+            z-index: 100;
+            /* Sets the z-index for layering, ensuring it's on top */
+        }
+
+        .overlay {
+            background-image: linear-gradient(to right,rgb(76, 175, 80),rgb(109, 248, 113),rgb(76, 175, 80));
+            /* Sets a green background for the overlay */
+            color: white;
+            /* Sets white text color for the overlay */
+            position: relative;
+            /* Sets relative positioning for the overlay */
+            left: -100%;
+            /* Positions the overlay off-screen to the left initially */
+            height: 100%;
+            /* Sets the overlay height to 100% */
+            width: 200%;
+            /* Sets the overlay width to 200% to allow sliding */
+            transform: translateX(0);
+            /* Initializes the overlay's horizontal position */
+            transition: transform 0.9s ease-in-out;
+            /* Adds a smooth transition effect */
+        }
+
+        .overlay-panel {
+            position: absolute;
+            /* Sets absolute positioning for the overlay panels */
+            display: flex;
+            /* Uses flexbox for layout */
+            align-items: center;
+            /* Centers content vertically */
+            justify-content: center;
+            /* Centers content horizontally */
+            flex-direction: column;
+            /* Sets flex direction to column */
+            padding: 0 40px;
+            /* Adds padding to overlay panels */
+            text-align: center;
+            /* Centers text in overlay panels */
+            top: 0;
+            /* Positions overlay panels at the top */
+            height: 100%;
+            /* Sets overlay panel height to 100% */
+            width: 45%;
+            /* Sets overlay panel width to 50% */
+            transform: translateX(0);
+            /* Initializes overlay panel horizontal position */
+            transition: transform 0.9s ease-in-out;
+            /* Adds a smooth transition effect */
+        }
+
+        .overlay-left {
+          
+            /* Positions the left overlay panel 20% from the right */
+            transform: translateX(-20%);
+            /* Moves the left overlay panel 20% to the left initially */
+        }
+
+        .overlay-right {
+            right: 0;
+            /* Positions the right overlay panel at the right edge */
+            transform: translateX(0);
+            /* Initializes the right overlay panel's horizontal position */
+        }
+
+        /* JavaScript added classes */
+        .container.right-panel-active .sign-in-form {
+            transform: translateX(100%);
+            /* Moves the sign-in form off-screen to the right */
+        }
+
+        .container.right-panel-active .sign-up-form {
+            transform: translateX(100%);
+            /* Moves the sign-up form into view from the right */
+            opacity: 1;
+            /* Makes the sign-up form visible */
+            z-index: 5;
+            /* Sets the z-index for layering */
+        }
+
+        .container.right-panel-active .overlay-container {
+            transform: translateX(-100%);
+            /* Moves the overlay container off-screen to the left */
+        }
+
+        .container.right-panel-active .overlay {
+            transform: translateX(50%);
+            /* Moves the overlay to its final position */
+        }
+
+        .container.right-panel-active .overlay-left {
+            transform: translateX(0);
+            /* Moves the left overlay panel to its final position */
+        }
+
+        .container.right-panel-active .overlay-right {
+            transform: translateX(20%);
+            /* Moves the right overlay panel to its final position */
+        }
+    ????????????????????????????????????????

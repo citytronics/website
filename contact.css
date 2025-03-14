@@ -1,0 +1,310 @@
+    .btnin {
+  padding: 15% 7%;
+  border: none;
+  outline: none;
+  color: #FDFDFD;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  gap:10px;
+}
+
+.btnin::after {
+  content: "";
+  z-index: -1;
+  position: absolute; /* Corrected semicolon */
+  width: 100%;
+  height: 100%; /* Corrected & to % */
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btnin::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+  #E261E2,
+  #DF1A33,
+  #F4E400,
+  #DF1A33,
+  #E261E2
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btnin:hover::before {
+  opacity: 1;
+}
+
+.btnin:active::after {
+    background: transparent;
+}
+
+.btnin:active {
+  color: #000;
+  font-weight: bold;
+}
+/*______________________________________________________________________________________________*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   .btnwh {
+  padding: 15% 7%;
+  border: none;
+  outline: none;
+  color: #FDFDFD;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  gap:10px;
+}
+
+.btnwh::after {
+  content: "";
+  z-index: -1;
+  position: absolute; /* Corrected semicolon */
+  width: 100%;
+  height: 100%; /* Corrected & to % */
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btnwh::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FFFFFF,
+    #77C338,
+    #FFFFFF,
+    #B8D926,
+    #FFFFFF,
+    #3AAD21,
+    #FFFFFF,
+    #64B552,
+    #FFFFFF /* Corrected color value */
+
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  filter: blur(8px);
+  animation: glowing 60s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btnwh:hover::before {
+  opacity: 1;
+}
+
+.btnwh:active::after {
+    background: transparent;
+}
+
+.btnwh:active {
+  color: #000;
+  font-weight: bold;
+}
+/*______________________________________________________________________________________________*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   .btnfa {
+  padding: 15% 7%;
+  border: none;
+  outline: none;
+  color: #FDFDFD;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  gap:10px;
+}
+
+.btnfa::after {
+  content: "";
+  z-index: -1;
+  position: absolute; /* Corrected semicolon */
+  width: 100%;
+  height: 100%; /* Corrected & to % */
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btnfa::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FFFFFF,
+    #0BB0F5,
+    #FFFFFF,
+    #40B3E2,
+    #FFFFFF,
+    #3295BD,
+    #FFFFFF,
+    #58B6DC,
+    #FFFFFF /* Corrected color value */
+
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  filter: blur(8px);
+  animation: glowing 60s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btnfa:hover::before {
+  opacity: 1;
+}
+
+.btnfa:active::after {
+    background: transparent;
+}
+
+.btnwfa:active {
+  color: #090707;
+  font-weight: bold;
+}
+/*______________________________________________________________________________________________*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   .btnca {
+  padding: 15% 7%;
+  border: none;
+  outline: none;
+  color: #FDFDFD;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  gap:10px;
+}
+
+.btnca::after {
+  content: "";
+  z-index: -1;
+  position: absolute; /* Corrected semicolon */
+  width: 100%;
+  height: 100%; /* Corrected & to % */
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btnca::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FFFFFF,
+    #77C338,
+    #B8D926,
+    #3AAD21,
+    #64B552
+     /* Corrected color value */
+
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  filter: blur(8px);
+  animation: glowing 60s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btnca:hover::before {
+  opacity: 1;
+}
+
+.btnca:active::after {
+    background: transparent;
+}
+
+.btnca:active {
+  color: #000;
+  font-weight: bold;
+}
+/*______________________________________________________________________________________________*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+ 
+ 
